@@ -30,48 +30,7 @@
 			</div>
 		</section>
 		
-		
-		<!--베스트셀러  -->
-		<section class="category_box">
-			<div class="box">
-			<label><a href="/bestseller">베스트셀러</a></label>
-				<ul class="category">
-					<li>
-						<div>
-							<div class="img_box">
-								<img src="/img/pizza2.png" alt="이미지">
-							</div>
-						</div>
-						
-					</li>
-					<li>
-						<div>
-							<div class="img_box">
-								<img src="/img/pizza2.png" alt="이미지">
-							</div>
-						</div>
-				
-					</li>
-					<li>
-						<div>
-							<div class="img_box">
-								<img src="/img/pizza2.png" alt="이미지">
-							</div>
-						</div>
-					
-					</li>
-					<li>
-						<div>
-							<div class="img_box">
-								<img src="/img/pizza2.png" alt="이미지">
-							</div>
-						</div>
-						
-					</li>
-
-				</ul>
-			</div>
-		</section>
+	
 	
 		<!-- 제품리스트 -->
 		<section class="goodslist">
