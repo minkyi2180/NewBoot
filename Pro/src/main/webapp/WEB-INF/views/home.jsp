@@ -30,32 +30,34 @@
 			</div>
 		</section>
 		
-	
+	"${pr_goods.g_name}"
 	
 		<!-- 제품리스트 -->
 		<section class="goodslist">
-		<label><a href="allgoods">All</a></label>
+		<label><a href="/goods/goods">All</a></label>
+			
 			<div class="goods">
-			<ul class="category">
-				
-					<li>
-						<div>
-							<div class="img_box">
-								<img src="/img/pizza2.png" alt="이미지">
-							</div>
-						</div>
-						
-					</li>
+			<ul class="AllGoods">
+		<c:forEach items="${goodsList}" var="goodsList">
+			<li>
+			<div class="img_box">
+			<img src="${goodsList.g_img}" alt="상품">
+			</div>
+			
+			<div class="info_box">
+			<h3><a href="/">${goodsList.g_name }</a></h3>
+			<h5><a href="/">${goodsList.g_price }</a></h5>
+			</div>
+			
+			</li>
+			
+
+		</c:forEach>
+			</ul>
 			</div>
 		</section>
 		
 		
-		<!-- 리뷰 -->
-		<section>
-			<div>
-			<label><a href="review">리뷰</a></label>
-			</div>
-		</section>
 
 	</main>
 </div>

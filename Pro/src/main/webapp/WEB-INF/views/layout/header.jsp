@@ -33,15 +33,26 @@ header .admin_page_btn a {
 	<header>
 	<a href="/"><img src="/img/baemin.jpg" alt="메인로고"> </a>
 	<div>	
+	<c:if test="${empty SPRING_SECURITY_CONTEXT }">
 		<ul class="h_list">
-
-			<li><a href="">고객센터</a></li> 
+		
+			<li><a href="/auth/signin">로그인</a></li>
+			<li><a href="/auth/signup">회원가입</a></li>			
 			<li><a href="">마이페이지</a></li>
 			<li><a href="">장바구니</a></li>
-			<li><a href="/auth/signup">회원가입</a></li>
-			<li><a href="/auth/signin">로그인</a></li>
+			<li><a href="">고객센터</a></li> 
 		</ul>
-		<!--  -->
+		</c:if>
+		
+		<c:if test="${!empty SPRING_SECURITY_CONTEXT }">
+		<ul class="h_list">
+			<li>${username}</a>
+			<li><button type="button" class="logout">로그아웃</button></li>
+			<li><a href="">마이페이지</a></li>
+			<li><a href="">장바구니</a></li>
+			<li><a href="">고객센터</a></li> 
+			</ul>
+		</c:if>
 	</div>
 	</header>
 </body> 

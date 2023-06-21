@@ -3,7 +3,7 @@
 <nav>
     <ul>
         
-        <li><a href="/">ALL</a></li>
+        <li><a href="/goods/goods">ALL</a></li>
         <li><a href="/">LIVING</a></li>
         <li><a href="/">ROOM</a></li>
         <li><a href="/">KITCHEN</a></li>
