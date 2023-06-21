@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pro.dao.AuthMapper">
+   
+	<select id="usernameChk" resultType="int">
+		SELECT COUNT(*) FROM PR_USER WHERE USERNAME = #{username}
+	</select>
+   
+	<insert id="signup">
+		INSERT INTO PR_USER (ID, USERNAME, PASSWORD, EMAIL, NICKNAME, PHONE) 
+		VALUES (USER_ID_SEQ.NEXTVAL, #{username}, #{password}, #{email}, #{nickname},#{phone} )
+	</insert>
+	
+		<select id="getUser" resultType="com.pro.config.auth.CustomUserDetails">
+		SELECT * FROM PR_USER WHERE USERNAME = #{username}
+	</select>
+   
+</mapper>

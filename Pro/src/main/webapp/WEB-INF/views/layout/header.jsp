@@ -46,6 +46,8 @@ header .admin_page_btn a {
 		
 		<c:if test="${!empty SPRING_SECURITY_CONTEXT }">
 		<ul class="h_list">
+		    
+	          <a href="/auth/myPage"><span class="nickname" data-nickname=${nickname } >${nickname }</span></a>
 			<li>${username}</a>
 			<li><button type="button" class="logout">로그아웃</button></li>
 			<li><a href="">마이페이지</a></li>
@@ -55,5 +57,16 @@ header .admin_page_btn a {
 		</c:if>
 	</div>
 	</header>
+	<script type="text/javascript">
+ 
+ 
+        $(".logout").click(function () {
+            location.href = "/logout";
+        })
+        
+        
+        
+    </script>
+ 
 </body> 
 
