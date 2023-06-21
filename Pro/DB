@@ -1,6 +1,6 @@
 DB
 
-
+--회원테이블
 CREATE TABLE PR_USER (
     ID NUMBER PRIMARY KEY,
     USERNAME VARCHAR2(100) NOT NULL,
@@ -23,3 +23,51 @@ CREATE TABLE PR_USER (
        NOCACHE 
        NOORDER;
        commit;
+       
+ -상품테이블   
+ create table pr_goods (
+    id number primary key,
+    cate_id number,
+    g_name varchar2(100) not null,
+	g_price number not null,
+	g_info varchar2(1000) not null,
+	g_img varchar2(200)
+);
+ 	//시퀀스
+    CREATE SEQUENCE GOODS_ID_SEQ
+       INCREMENT BY 1
+       START WITH 1
+       MINVALUE 1
+       MAXVALUE 99999999999
+       NOCYCLE
+       NOCACHE
+       NOORDER;
+       
+ - 카테고리 번호 
+ 1. living 2. room 3. kitchen 4. bath
+ 
+ - 장바구니
+ create table pr_cart(
+ 	cart_id number primary key,
+ 	username varchar2(100),
+ 	pr_goods varchar2(100)
+);
+
+-주문
+create table pr_order(
+	order_num number primary key,
+	pr_goods_id number not null,
+	pr_user_id number not null,
+	order_date timestamp default sysdate,
+	pay_method varchar2(30),
+	delivery_status varchar2(50) default '주문접수'
+	phone varchar2(20) not null,
+	delivery address1 number not null,
+	delivery address2 varchar2(200) not null,
+	delivery address3 varchar2(200)
+	total_price number not null,
+	request varchar2(2000)
+);
+	
+	
+ 
