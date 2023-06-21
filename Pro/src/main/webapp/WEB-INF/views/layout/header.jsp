@@ -44,15 +44,17 @@ header .admin_page_btn a {
 		</ul>
 		</c:if>
 		
-		<c:if test="${!empty SPRING_SECURITY_CONTEXT }">
-		<ul class="h_list">
-		    
-	          <a href="/auth/myPage"><span class="nickname" data-nickname=${nickname } >${nickname }</span></a>
-			<li>${username}</a>
-			<li><button type="button" class="logout">로그아웃</button></li>
+		<c:if test="${!empty SPRING_SECURITY_CONTEXT }">                            
+	
+	                  
+		<ul class="h_list">  		
+		<c:set var="nickname" value="${pr_user.nickname}"/>
 			<li><a href="">마이페이지</a></li>
 			<li><a href="">장바구니</a></li>
 			<li><a href="">고객센터</a></li> 
+			<li>"${username}"님</a>
+			<li><button type="button" class="logout">로그아웃</button></li>
+
 			</ul>
 		</c:if>
 	</div>

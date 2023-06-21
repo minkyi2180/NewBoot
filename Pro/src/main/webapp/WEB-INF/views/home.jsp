@@ -30,7 +30,7 @@
 			</div>
 		</section>
 		
-	"${pr_goods.g_name}"
+	
 	
 		<!-- 제품리스트 -->
 		<section class="goodslist">

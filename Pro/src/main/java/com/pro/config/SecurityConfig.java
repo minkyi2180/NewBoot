@@ -22,13 +22,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
 			.anyRequest()
 			.permitAll()
-			.and()
+		.and()
 			.formLogin()
 			.loginPage("/auth/signin")
 			.loginProcessingUrl("/auth/signin") 
 			.defaultSuccessUrl("/")
 			.failureUrl("/auth/failed")
-			.and()
+		.and()
 			.logout()
 			.logoutSuccessUrl("/");
 		

@@ -23,6 +23,7 @@ public class AuthController {
 	
 	@GetMapping("/auth/signin")
 	public String signin() {
+		System.out.println("로그인창");
 		return "auth/signin";
 	}
 	

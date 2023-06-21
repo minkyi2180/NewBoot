@@ -15,13 +15,21 @@ header img {
 }
 
 
+.h_list li{
+	
+	display: inline-block;
+	position:relative;
+	float: right;
+	margin-right: 15px;
+	color: black;
+	}
 .h_list li a{
 	
 	display: inline-block;
 	position:relative;
 	float: right;
 	margin-right: 15px;
-	color: white;
+	color: black;
 	}
 
 .menu_tab_box {
